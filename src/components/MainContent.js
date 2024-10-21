@@ -1,21 +1,10 @@
 import * as React from "react";
-import PropTypes from "prop-types";
-import Avatar from "@mui/material/Avatar";
 import AvatarGroup from "@mui/material/AvatarGroup";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Chip from "@mui/material/Chip";
 import Grid from "@mui/material/Grid2";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import FormControl from "@mui/material/FormControl";
-import InputAdornment from "@mui/material/InputAdornment";
-import OutlinedInput from "@mui/material/OutlinedInput";
 import { styled, useTheme } from "@mui/material/styles";
-import SearchRoundedIcon from "@mui/icons-material/SearchRounded";
-import SitemarkIcon from "./SitemarkIcon";
 import { FacebookRounded, Instagram } from "@mui/icons-material";
 
 const SyledCard = styled(Card)(({ theme }) => ({
@@ -60,27 +49,6 @@ function Author({ icon, social, account }) {
       </Box>
       <Typography variant="caption">{account}</Typography>
     </Box>
-  );
-}
-
-export function Search() {
-  return (
-    <FormControl sx={{ width: { xs: "100%", md: "25ch" } }} variant="outlined">
-      <OutlinedInput
-        size="small"
-        id="search"
-        placeholder="Search…"
-        sx={{ flexGrow: 1 }}
-        startAdornment={
-          <InputAdornment position="start" sx={{ color: "text.primary" }}>
-            <SearchRoundedIcon fontSize="small" />
-          </InputAdornment>
-        }
-        inputProps={{
-          "aria-label": "search",
-        }}
-      />
-    </FormControl>
   );
 }
 
@@ -137,7 +105,7 @@ export default function MainContent() {
           justifyContent: "center",
         }}
       >
-        <img src="/logo.png" style={{height: "100px"}} />
+        <img src="logo.png" style={{height: "100px"}} />
         <Typography sx={{ marginTop: "24px" }}>
           Stay in the loop with my latest crochet
         </Typography>
